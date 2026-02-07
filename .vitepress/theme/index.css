@@ -1,0 +1,13 @@
+@import "./var.css";
+
+/* 默认使用浅色模式的图片 */
+.hero img {
+  content: url('/logo-light.jpg');
+}
+
+/* 深色模式下使用 logo-dark.jpg */
+@media (prefers-color-scheme: dark) {
+  .hero img {
+    content: url('/logo-dark.jpg');
+  }
+}

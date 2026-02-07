@@ -1,5 +1,11 @@
 import { defineConfig } from 'vitepress'
 
+import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
+import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
+import { 
+  InlineLinkPreviewElementTransform 
+} from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "RandPicker",
@@ -22,7 +28,35 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/xuanxuan1231/RandPicker' }
     ]
-  }
+  },
+  locales: {
+    root: {
+      label: '简体中文',
+      lang: 'zh-CN'
+    },
+    fr: {
+      label: 'English',
+      lang: 'en',
+      link: '/en'
+    }
+  },
+  markdown: {
+    config: (md) => {
+      md.use(BiDirectionalLinks());
+      md.use(UnlazyImages(), { 
+        imgElementTag: 'NolebaseUnlazyImg', 
+      });
+      md.use(InlineLinkPreviewElementTransform)
+    },
+  },
+  vue: {
+    template: {
+      transformAssetUrls: {
+        // 其他各种配置...
+        NolebaseUnlazyImg: ['src'], 
+      },
+    },
+  },
 })

@@ -4,8 +4,12 @@ layout: home
 
 hero:
   name: "RandPicker"
-  text: "RandPicker's official website."
+  text: "新一代随机选人工具"
   tagline: My great project tagline
+  image:
+    light: /icon-light.jpg
+    dark: /icon-dark.jpg
+    alt: RandPicker Icon
   actions:
     - theme: brand
       text: Markdown Examples
