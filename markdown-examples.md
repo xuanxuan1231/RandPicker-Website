@@ -1,3 +1,13 @@
+---
+title: 页面属性
+tags:
+  - 集成/VitePress-插件
+  - Markdown/frontmatter
+progress: 35
+createdAt: 2024-01-23T10:00:00+08:00
+updatedAt: 2024-01-23T15:30:00+08:00
+---
+
 # Markdown Extension Examples
 
 This page demonstrates some of the built-in markdown extensions provided by VitePress.

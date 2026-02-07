@@ -4,6 +4,7 @@ import type { Theme as ThemeConfig } from 'vitepress'
 import {
     InjectionKey,
     NolebaseEnhancedReadabilitiesMenu,
+    NolebaseEnhancedReadabilitiesPlugin,
     NolebaseEnhancedReadabilitiesScreenMenu,
     Options
 } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
@@ -13,8 +14,16 @@ import {
 import { 
   NolebaseGitChangelogPlugin 
 } from '@nolebase/vitepress-plugin-git-changelog/client'
+import {
+  NolebasePagePropertiesPlugin,
+  NolebasePageProperties,
+  NolebasePagePropertiesEditor,
+  InjectionKey as NolebasePagePropertiesInjectionKey,
+} from '@nolebase/vitepress-plugin-page-properties/client'
 
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
+import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
+import '@nolebase/vitepress-plugin-page-properties/client/style.css'
 import './index.css'
 import Layout from './Layout.vue'
 
@@ -44,8 +53,105 @@ export const Theme: ThemeConfig = {
                 }
             }
         } as Options);
+        
         app.use(NolebaseInlineLinkPreviewPlugin);
-        app.use(NolebaseGitChangelogPlugin)
+        app.use(NolebaseGitChangelogPlugin);
+        app.use(NolebasePagePropertiesPlugin);
+        
+        // 注册页面属性编辑器组件
+        app.component('NolebasePagePropertiesEditor', NolebasePagePropertiesEditor);
+        
+        // 配置页面属性
+        app.provide(NolebasePagePropertiesInjectionKey, {
+            properties: {
+                'zh-CN': [
+                    {
+                        key: 'tags',
+                        type: 'tags',
+                        title: '标签',
+                    },
+                    {
+                        key: 'progress',
+                        type: 'progress',
+                        title: '进度',
+                    },
+                    {
+                        key: 'createdAt',
+                        type: 'datetime',
+                        title: '创建时间',
+                        formatAsFrom: true,
+                        dateFnsLocaleName: 'zhCN',
+                    },
+                    {
+                        key: 'updatedAt',
+                        type: 'datetime',
+                        title: '更新时间',
+                        formatAsFrom: true,
+                        dateFnsLocaleName: 'zhCN',
+                    },
+                    {
+                        key: 'wordsCount',
+                        type: 'dynamic',
+                        title: '字数',
+                        options: {
+                            type: 'wordsCount',
+                        },
+                    },
+                    {
+                        key: 'readingTime',
+                        type: 'dynamic',
+                        title: '阅读时间',
+                        options: {
+                            type: 'readingTime',
+                            dateFnsLocaleName: 'zhCN',
+                        },
+                    },
+                ],
+                'en': [
+                    {
+                        key: 'tags',
+                        type: 'tags',
+                        title: 'Tags',
+                    },
+                    {
+                        key: 'progress',
+                        type: 'progress',
+                        title: 'Progress',
+                    },
+                    {
+                        key: 'createdAt',
+                        type: 'datetime',
+                        title: 'Created at',
+                        formatAsFrom: true,
+                        dateFnsLocaleName: 'enUS',
+                    },
+                    {
+                        key: 'updatedAt',
+                        type: 'datetime',
+                        title: 'Updated at',
+                        formatAsFrom: true,
+                        dateFnsLocaleName: 'enUS',
+                    },
+                    {
+                        key: 'wordsCount',
+                        type: 'dynamic',
+                        title: 'Word count',
+                        options: {
+                            type: 'wordsCount',
+                        },
+                    },
+                    {
+                        key: 'readingTime',
+                        type: 'dynamic',
+                        title: 'Reading time',
+                        options: {
+                            type: 'readingTime',
+                            dateFnsLocaleName: 'enUS',
+                        },
+                    },
+                ],
+            },
+        });
     },
 }
 

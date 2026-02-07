@@ -27,6 +27,7 @@
     "@nolebase/vitepress-plugin-git-changelog": "^2.18.2",
     "@nolebase/vitepress-plugin-inline-link-preview": "^2.18.2",
     "@nolebase/vitepress-plugin-page-properties": "^2.18.2",
+    "date-fns": "^4.1.0",
     "vitepress": "^2.0.0-alpha.15"
   }
 }
