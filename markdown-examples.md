@@ -1,95 +1,141 @@
 ---
-title: 页面属性
-tags:
-  - 集成/VitePress-插件
-  - Markdown/frontmatter
-progress: 35
-createdAt: 2024-01-23T10:00:00+08:00
-updatedAt: 2024-01-23T15:30:00+08:00
+title: Markdown 使用示例
+description: RandPicker 文档的 Markdown 语法示例
 ---
 
-# Markdown Extension Examples
+# Markdown 使用示例
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+本页面展示 RandPicker 文档中常用的 Markdown 语法。
 
-## Syntax Highlighting
+## 代码高亮
 
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
+VitePress 提供由 [Shiki](https://github.com/shikijs/shiki) 驱动的语法高亮功能：
 
-**Input**
+### JSON 配置示例
 
-````md
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
+```json
+{
+  "students": [
+    {
+      "id": "uuid-generated-id",
+      "name": "张三",
+      "weight": 1,
+      "enabled": true,
+      "avatar": "",
+      "properties": []
+    }
+  ]
+}
+```
+
+### Python 代码示例
+
+```python
+from core.choice import ChoiceMaker
+
+# 创建选择器实例
+choice_maker = ChoiceMaker(parent)
+
+# 随机选择学生
+result = choice_maker.choosePeople(number=3, notify=True)
+```
+
+### Bash 命令示例
+
+```bash
+# 安装依赖
+uv sync
+
+# 启动应用
+python app.py
+```
+
+## 自定义容器
+
+### 提示框
+
+::: tip 提示
+权重值越高，该学生被选中的概率越大。
+:::
+
+### 信息框
+
+::: info 信息
+RandPicker 支持 Windows、macOS 和 Linux 多个平台。
+:::
+
+### 警告框
+
+::: warning 注意
+启用 UIAccess 权限需要管理员权限，程序将以管理员权限重新启动。
+:::
+
+### 危险警告
+
+::: danger 警告
+删除 `settings.json` 文件会重置所有设置，请谨慎操作。
+:::
+
+### 详情折叠
+
+::: details 高级配置
+点击展开查看完整的配置选项：
+
+```json
+{
+  "notification": {
+    "fallback": true,
+    "options": {
+      "native": {
+        "enabled": true,
+        "format": {
+          "title": "抽选了 {count} {suffix}",
+          "body": "{names}"
+        }
+      }
     }
   }
 }
 ```
-````
-
-**Output**
-
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-
-## Custom Containers
-
-**Input**
-
-```md
-::: info
-This is an info box.
 :::
 
-::: tip
-This is a tip.
-:::
+## 表格示例
 
-::: warning
-This is a warning.
-:::
+| 通知方式 | 说明 | 配置选项 |
+|---------|------|---------|
+| 原生通知 | 使用系统原生通知 | 启用状态、格式化内容 |
+| ClassIsland | 与 ClassIsland 应用集成 | 遮罩时长、正文类型 |
+| RandPicker | 内置通知方式 | 启用状态 |
+| ClassWidgets | 与 ClassWidgets 集成 | 启用状态 |
 
-::: danger
-This is a dangerous warning.
-:::
+## 引用示例
 
-::: details
-This is a details block.
-:::
-```
+> RandPicker 是一款功能强大的随机选人工具，支持 GUI 界面、权重选择、多种通知方式等功能。
 
-**Output**
+## 列表示例
 
-::: info
-This is an info box.
-:::
+### 无序列表
 
-::: tip
-This is a tip.
-:::
+- 权重随机选择
+- 多种通知方式
+- 现代化界面
+- 学生管理
+- 系统托盘集成
+- 跨平台支持
 
-::: warning
-This is a warning.
-:::
+### 有序列表
 
-::: danger
-This is a dangerous warning.
-:::
+1. 安装依赖
+2. 添加学生
+3. 启动应用
+4. 开始抽选
 
-::: details
-This is a details block.
-:::
+## 链接示例
 
-## More
+- [快速开始](/guide/quick-start)
+- [使用指南](/guide/usage)
+- [Markdown 扩展文档](https://vitepress.dev/guide/markdown)
 
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+## 更多语法
+
+查看 [VitePress 官方文档](https://vitepress.dev/guide/markdown) 了解更多 Markdown 扩展语法。

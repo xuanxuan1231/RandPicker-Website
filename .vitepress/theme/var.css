@@ -8,6 +8,20 @@
   --vp-c-brand-1: #3dd68c;
   --vp-c-brand-2: #30a46c;
   --vp-c-brand-3: #298459;
+
+  /* hero标题渐变色 - 深色模式 */
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #7A38F5,
+    #73F7F7
+  );
+
+  /* hero logo背景渐变色 - 深色模式 */
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #7A38F5 50%,
+    #73F7F7 50%
+  );
 }
 /* 以前的vp-c-brand已弃用 */
 
@@ -16,15 +30,15 @@
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
-    #bd34fe,
-    #41d1ff
+    #3D8AF6,
+    #9F92CD
   );
 
   /*hero logo背景渐变色 */
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
-    #bd34fe 50%,
-    #47caff 50%
+    #3D8AF6 50%,
+    #9F92CD 50%
   );
   --vp-home-hero-image-filter: blur(40px);
 }
