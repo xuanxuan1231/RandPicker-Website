@@ -33,7 +33,6 @@
     "@types/node": "^25.2.3",
     "date-fns": "^4.1.0",
     "markdown-it-footnote": "^4.0.0",
-    "thumbhash": "^0.1.1",
     "vitepress": "^2.0.0-alpha.15"
   }
 }

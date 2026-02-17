@@ -67,6 +67,12 @@ export default defineConfig({
     plugins: [ 
       ThumbnailHashImages(), 
     ],
+    ssr: {
+      noExternal: [
+        '@unlazy/vue',
+        '@nolebase/vitepress-plugin-thumbnail-hash',
+      ],
+    },
   },
   vue: {
     template: {
