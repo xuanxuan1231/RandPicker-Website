@@ -12,11 +12,11 @@ hero:
     alt: RandPicker Icon
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 快速上手
+      link: /quick-start
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 了解
+      link: /about
 
 features:
   - title: Feature A

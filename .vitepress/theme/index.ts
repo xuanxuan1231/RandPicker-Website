@@ -54,7 +54,10 @@ export const Theme: ThemeConfig = {
                         title: 'Enhanced Readabilities Plugin',
                     }
                 }
-            }
+            },
+            spotlight: {
+                defaultToggle: true,
+            },
         } as Options);
         
         app.use(NolebaseInlineLinkPreviewPlugin);
