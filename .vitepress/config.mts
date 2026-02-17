@@ -14,6 +14,18 @@ import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
 export default defineConfig({
   title: "RandPicker",
   description: "新一代随机选人工具",
+  head: [
+    ['link', { id: 'favicon', rel: 'icon', type: 'image/x-icon', href: '/icon-dark.ico' }],
+    ['script', {}, `
+      (() => {
+        const root = document.documentElement;
+        const icon = document.getElementById('favicon');
+        const update = () => icon?.setAttribute('href', root.classList.contains('dark') ? '/icon-dark.ico' : '/icon-light.ico');
+        new MutationObserver(update).observe(root, { attributes: true, attributeFilter: ['class'] });
+        update();
+      })();
+    `],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: { dark: '/icon-dark.jpg', light: '/icon-light.jpg', width: 32, height: 32 },
