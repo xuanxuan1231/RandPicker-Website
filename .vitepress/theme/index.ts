@@ -4,7 +4,6 @@ import type { Theme as ThemeConfig } from 'vitepress'
 import {
     InjectionKey,
     NolebaseEnhancedReadabilitiesMenu,
-    NolebaseEnhancedReadabilitiesPlugin,
     NolebaseEnhancedReadabilitiesScreenMenu,
     Options
 } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
@@ -16,14 +15,18 @@ import {
 } from '@nolebase/vitepress-plugin-git-changelog/client'
 import {
   NolebasePagePropertiesPlugin,
-  NolebasePageProperties,
   NolebasePagePropertiesEditor,
   InjectionKey as NolebasePagePropertiesInjectionKey,
 } from '@nolebase/vitepress-plugin-page-properties/client'
+import { 
+  NolebaseUnlazyImg, 
+} from '@nolebase/vitepress-plugin-thumbnail-hash/client'
 
+import '@nolebase/vitepress-plugin-thumbnail-hash/client/style.css'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import '@nolebase/vitepress-plugin-page-properties/client/style.css'
+import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
 import './index.css'
 import Layout from './Layout.vue'
 
@@ -60,6 +63,7 @@ export const Theme: ThemeConfig = {
         
         // 注册页面属性编辑器组件
         app.component('NolebasePagePropertiesEditor', NolebasePagePropertiesEditor);
+        app.component('NolebaseUnlazyImg', NolebaseUnlazyImg);
         
         // 配置页面属性
         app.provide(NolebasePagePropertiesInjectionKey, {

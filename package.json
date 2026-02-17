@@ -23,11 +23,17 @@
   "devDependencies": {
     "@nolebase/markdown-it-bi-directional-links": "^2.18.2",
     "@nolebase/markdown-it-unlazy-img": "^2.18.2",
+    "@nolebase/vitepress-plugin-enhanced-mark": "^2.18.2",
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.18.2",
     "@nolebase/vitepress-plugin-git-changelog": "^2.18.2",
     "@nolebase/vitepress-plugin-inline-link-preview": "^2.18.2",
     "@nolebase/vitepress-plugin-page-properties": "^2.18.2",
+    "@nolebase/vitepress-plugin-thumbnail-hash": "^2.18.2",
+    "@types/markdown-it-footnote": "^3.0.4",
+    "@types/node": "^25.2.3",
     "date-fns": "^4.1.0",
+    "markdown-it-footnote": "^4.0.0",
+    "thumbhash": "^0.1.1",
     "vitepress": "^2.0.0-alpha.15"
   }
 }

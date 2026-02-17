@@ -1,10 +1,14 @@
 import { defineConfig } from 'vitepress'
 
 import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
-import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
 import { 
   InlineLinkPreviewElementTransform 
 } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
+import markdownItFootnote from 'markdown-it-footnote'
+import { 
+  ThumbnailHashImages, 
+} from '@nolebase/vitepress-plugin-thumbnail-hash/vite'
+import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -12,20 +16,27 @@ export default defineConfig({
   description: "新一代随机选人工具",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: { dark: '/icon-dark.jpg', light: '/icon-light.jpg', width: 32, height: 32 },
+
     nav: [
       { text: '首页', link: '/' },
-      { text: '示例', link: '/markdown-examples' }
+      { text: '了解', link: '/about' },
+      { text: '快速上手', link: '/quick-start' },
+      { text: '通知 & 集成', link: '/notification' }
     ],
 
-    sidebar: [
-      {
-        text: '示例',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    sidebar: {
+      '/notification/': [
+        {
+          text: '通知',
+          link: '/notification',
+          items: [
+            { text: '通知格式', link: '/notification/format' },
+            { text: 'ClassIsland 集成', link: '/notification/classisland' },
+          ]
+        },
+      ]
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/xuanxuan1231/RandPicker' }
@@ -45,11 +56,17 @@ export default defineConfig({
   markdown: {
     config: (md) => {
       md.use(BiDirectionalLinks());
+      md.use(InlineLinkPreviewElementTransform);
+      md.use(markdownItFootnote);
       md.use(UnlazyImages(), { 
         imgElementTag: 'NolebaseUnlazyImg', 
       });
-      md.use(InlineLinkPreviewElementTransform)
     },
+  },
+  vite: { 
+    plugins: [ 
+      ThumbnailHashImages(), 
+    ],
   },
   vue: {
     template: {
@@ -58,5 +75,5 @@ export default defineConfig({
         NolebaseUnlazyImg: ['src'], 
       },
     },
-  },
+  }
 })
