@@ -30,26 +30,6 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: { dark: '/icon-dark.jpg', light: '/icon-light.jpg', width: 32, height: 32 },
 
-    nav: [
-      { text: '首页', link: '/' },
-      { text: '了解', link: '/about' },
-      { text: '快速上手', link: '/quick-start' },
-      { text: '通知 & 集成', link: '/notification' }
-    ],
-
-    sidebar: {
-      '/notification/': [
-        {
-          text: '通知',
-          link: '/notification',
-          items: [
-            { text: '通知格式', link: '/notification/format' },
-            { text: 'ClassIsland 集成', link: '/notification/classisland' },
-          ]
-        },
-      ]
-    },
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/xuanxuan1231/RandPicker' }
     ]
@@ -57,12 +37,84 @@ export default defineConfig({
   locales: {
     root: {
       label: '简体中文',
-      lang: 'zh-CN'
+      lang: 'zh-CN',
+      description: '新一代随机选人工具',
+      themeConfig: {
+        docFooter: {
+          prev: '上一页',
+          next: '下一页'
+        },
+        outline: {
+          label: '页面导航'
+        },
+        lastUpdated: {
+          text: '最后更新'
+        },
+        langMenuLabel: '多语言',
+        returnToTopLabel: '返回顶部',
+        sidebarMenuLabel: '菜单',
+        darkModeSwitchLabel: '主题',
+        lightModeSwitchTitle: '切换到浅色模式',
+        darkModeSwitchTitle: '切换到深色模式',
+        nav: [
+          { text: '首页', link: '/' },
+          { text: '了解', link: '/about' },
+          { text: '快速上手', link: '/quick-start' },
+          { text: '通知 & 集成', link: '/notification' }
+        ],
+        sidebar: {
+          '/notification/': [
+            {
+              text: '通知 & 集成',
+              link: '/notification',
+              items: [
+                { text: '通知格式', link: '/notification/format' },
+                {
+                  text: 'ClassIsland 集成',
+                  link: '/notification/classisland',
+                  items: [
+                    { text: '安装', link: '/notification/classisland/setup' },
+                    { text: '配置', link: '/notification/classisland/configuration'}
+                  ]
+                },
+              ]
+            },
+          ]
+        },
+      }
     },
-    fr: {
+    en: {
       label: 'English',
       lang: 'en',
-      link: '/en'
+      link: '/en/',
+      description: 'The next-generation random picker tool.',
+      themeConfig: {
+        nav: [
+          { text: 'Home', link: '/en/' },
+          { text: 'About', link: '/en/about' },
+          { text: 'Quick Start', link: '/en/quick-start' },
+          { text: 'Notifications & Integration', link: '/en/notification' }
+        ],
+        sidebar: {
+          '/en/notification/': [
+            {
+              text: 'Notifications & Integration',
+              link: '/en/notification',
+              items: [
+                { text: 'Notification Format', link: '/en/notification/format' },
+                {
+                  text: 'ClassIsland Integration',
+                  link: '/en/notification/classisland',
+                  items: [
+                    { text: 'Setup', link: '/en/notification/classisland/setup' },
+                    { text: 'Configuration', link: '/en/notification/classisland/configuration' }
+                  ]
+                },
+              ]
+            },
+          ]
+        },
+      }
     }
   },
   markdown: {

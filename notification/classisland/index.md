@@ -1,5 +1,5 @@
 ---
-title: ClassIsland
+title: ClassIsland 集成
 progress: 80
 ---
 
@@ -10,7 +10,7 @@ ClassIsland 集成服务仍处于开发阶段。
 :::
 
 :::warning 兼容性警告
-集成只适用于 ClassIsland v2 (1.7.101.0 以上)[^1]。可能会增加对 ClassIsland v1 的兼容。
+集成只适用于 ClassIsland v2 <Badge type="tip" text="^1.7.101.0" />[^1]。可能会增加对 ClassIsland v1 的兼容。
 :::
 
 RandPicker 使用 <mark>ClassIsland 插件</mark>[^1]与其通信。完成设置后，你可以让 RandPicker 将抽选通知发送到 ClassIsland，来获得更好的通知体验。
@@ -20,11 +20,11 @@ RandPicker 使用 <mark>ClassIsland 插件</mark>[^1]与其通信。完成设置
 
 </details>
 
-## 先决条件
+## 先决条件 {#requirements}
 
 要安装 ClassIsland 集成，你需要：
-- 安装了 1.7.101.0 以上版本的 <mark>ClassIsland</mark> [点此下载](https://www.classisland.tech/download)；
-- 安装了适用于你的电脑的 <mark>.NET 8 运行时</mark> [点此下载](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)。
+- 安装了 <Badge type="tip" text="^1.7.101.0" /> 的 <mark>ClassIsland</mark>  [>>下载](https://www.classisland.tech/download)；
+- 安装了适用于你的电脑的 <mark>.NET 8 运行时</mark>  [>>下载](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)。
 
 :::tip 不知道你的电脑系统/架构？RandPicker 来帮你！
 在 RandPicker 设置 -> 通知 & 集成 -> ClassIsland 中，若你没有安装 .NET 运行时，你会看到两条消息：
@@ -36,6 +36,10 @@ RandPicker 已为你的电脑获取适合的 .NET 下载链接。通常情况下
 
 ## 安装
 
+见 [安装](setup.md)。
+
 ## 配置
+
+见 [配置](configuration.md)。
 
 [^1]: 见 [ClassIsland 文档](https://docs.classisland.tech/app/plugin.html)
