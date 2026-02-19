@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite'
-import { join } from 'node:path'
 import {
   GitChangelog,
   GitChangelogMarkdownSection,
@@ -24,10 +23,7 @@ export default defineConfig({
   plugins: [
     PageProperties(),
     PagePropertiesMarkdownSection({
-      excludes: [
-        join('pages', 'en', 'index.md'),
-        join('pages', 'zh-CN', 'index.md'),
-      ],
+      exclude: (_, context) => context.helpers.idEquals('index.md'),
     }),
     GitChangelog({
       repoURL: () => 'https://github.com/xuanxuan1231/RandPicker-Website',
