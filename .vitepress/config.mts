@@ -5,13 +5,11 @@ import {
   InlineLinkPreviewElementTransform 
 } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
 import markdownItFootnote from 'markdown-it-footnote'
-import { 
-  ThumbnailHashImages, 
-} from '@nolebase/vitepress-plugin-thumbnail-hash/vite'
 import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: 'zh-CN',
   title: "RandPicker",
   description: "新一代随机选人工具",
   head: [
@@ -125,17 +123,6 @@ export default defineConfig({
       md.use(UnlazyImages(), { 
         imgElementTag: 'NolebaseUnlazyImg', 
       });
-    },
-  },
-  vite: { 
-    plugins: [ 
-      ThumbnailHashImages(), 
-    ],
-    ssr: {
-      noExternal: [
-        '@unlazy/vue',
-        '@nolebase/vitepress-plugin-thumbnail-hash',
-      ],
     },
   },
   vue: {
