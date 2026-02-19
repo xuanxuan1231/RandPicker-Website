@@ -11,3 +11,7 @@
     content: url('/logo-dark.jpg');
   }
 }
+
+.NotFound .quote {
+  white-space: pre-line !important;
+}

@@ -54,11 +54,17 @@ export default defineConfig({
         darkModeSwitchLabel: '主题',
         lightModeSwitchTitle: '切换到浅色模式',
         darkModeSwitchTitle: '切换到深色模式',
+        notFound: {
+          title: '页面未找到',
+          quote: '别为一页迷途叹息，转身处，\n常有星光为你引路。',
+          linkLabel: '返回首页',
+          linkText: '带我回首页'
+        },
         nav: [
           { text: '首页', link: '/' },
           { text: '了解', link: '/about' },
-          { text: '快速上手', link: '/quick-start' },
-          { text: '通知 & 集成', link: '/notification' }
+          { text: '快速上手', link: '/quick-start/' },
+          { text: '通知 & 集成', link: '/notification/' }
         ],
         sidebar: {
           '/notification/': [
