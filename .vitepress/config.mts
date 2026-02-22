@@ -85,6 +85,10 @@ export default defineConfig({
             },
           ]
         },
+        footer: {
+          message: '在 GNU 公共许可证 v3 下发布。',
+          copyright: '版权所有 © 2026 Wenxuan Shen. 保留所有权利。',
+        },
       }
     },
     en: {
@@ -99,6 +103,10 @@ export default defineConfig({
           { text: 'Quick Start', link: '/en/quick-start' },
           { text: 'Notifications & Integration', link: '/en/notification' }
         ],
+        footer: {
+          message: 'Released under the GNU General Public License v3.',
+          copyright: 'Copyright © 2026 Wenxuan Shen. All rights reserved.',
+        },
         sidebar: {
           '/en/notification/': [
             {
