@@ -77,7 +77,7 @@ export default defineConfig({
                   text: 'ClassIsland 集成',
                   link: '/notification/classisland',
                   items: [
-                    { text: '安装', link: '/notification/classisland/setup' },
+                    { text: '安装', link: '/notification/classisland/installation' },
                     { text: '配置', link: '/notification/classisland/configuration'}
                   ]
                 },
@@ -118,7 +118,7 @@ export default defineConfig({
                   text: 'ClassIsland Integration',
                   link: '/en/notification/classisland',
                   items: [
-                    { text: 'Setup', link: '/en/notification/classisland/setup' },
+                    { text: 'Installation', link: '/en/notification/classisland/installation' },
                     { text: 'Configuration', link: '/en/notification/classisland/configuration' }
                   ]
                 },

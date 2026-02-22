@@ -34,43 +34,43 @@ import Layout from './Layout.vue'
 const zhPageProperties = [
     {
         key: 'tags',
-        type: 'tags',
+        type: 'tags' as const,
         title: '标签',
     },
     {
         key: 'progress',
-        type: 'progress',
+        type: 'progress' as const,
         title: '进度',
     },
     {
         key: 'createdAt',
-        type: 'datetime',
+        type: 'datetime' as const,
         title: '创建时间',
         formatAsFrom: true,
-        dateFnsLocaleName: 'zhCN',
+        dateFnsLocaleName: 'zhCN' as const,
     },
     {
         key: 'updatedAt',
-        type: 'datetime',
+        type: 'datetime' as const,
         title: '更新时间',
         formatAsFrom: true,
-        dateFnsLocaleName: 'zhCN',
+        dateFnsLocaleName: 'zhCN' as const,
     },
     {
         key: 'wordsCount',
-        type: 'dynamic',
+        type: 'dynamic' as const,
         title: '字数',
         options: {
-            type: 'wordsCount',
+            type: 'wordsCount' as const,
         },
     },
     {
         key: 'readingTime',
-        type: 'dynamic',
+        type: 'dynamic' as const,
         title: '阅读时间',
         options: {
-            type: 'readingTime',
-            dateFnsLocaleName: 'zhCN',
+            type: 'readingTime' as const,
+            dateFnsLocaleName: 'zhCN' as const,
         },
     },
 ]
@@ -78,43 +78,43 @@ const zhPageProperties = [
 const enPageProperties = [
     {
         key: 'tags',
-        type: 'tags',
+        type: 'tags' as const,
         title: 'Tags',
     },
     {
         key: 'progress',
-        type: 'progress',
+        type: 'progress' as const,
         title: 'Progress',
     },
     {
         key: 'createdAt',
-        type: 'datetime',
+        type: 'datetime' as const,
         title: 'Created at',
         formatAsFrom: true,
-        dateFnsLocaleName: 'enUS',
+        dateFnsLocaleName: 'enUS' as const,
     },
     {
         key: 'updatedAt',
-        type: 'datetime',
+        type: 'datetime' as const,
         title: 'Updated at',
         formatAsFrom: true,
-        dateFnsLocaleName: 'enUS',
+        dateFnsLocaleName: 'enUS' as const,
     },
     {
         key: 'wordsCount',
-        type: 'dynamic',
+        type: 'dynamic' as const,
         title: 'Word count',
         options: {
-            type: 'wordsCount',
+            type: 'wordsCount' as const,
         },
     },
     {
         key: 'readingTime',
-        type: 'dynamic',
+        type: 'dynamic' as const,
         title: 'Reading time',
         options: {
-            type: 'readingTime',
-            dateFnsLocaleName: 'enUS',
+            type: 'readingTime' as const,
+            dateFnsLocaleName: 'enUS' as const,
         },
     },
 ]
