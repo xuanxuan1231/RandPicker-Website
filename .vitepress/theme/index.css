@@ -1,5 +1,15 @@
 @import "./var.css";
 
+/*
+ * 防止滚动条出现/消失时视口水平跳动。
+ * 在有滚动条的页面（如文档）切换到无滚动条页面（如 404）时，
+ * 浏览器会移除 ~15px 的滚动条宽度导致内容偏移。
+ * scrollbar-gutter: stable 让浏览器始终为滚动条预留空间。
+ */
+html {
+  scrollbar-gutter: stable;
+}
+
 /* 默认使用浅色模式的图片 */
 .hero img {
   content: url('/logo-light.jpg');
