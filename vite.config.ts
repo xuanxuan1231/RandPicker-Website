@@ -10,6 +10,7 @@ import {
 import {
   ThumbnailHashImages,
 } from '@nolebase/vitepress-plugin-thumbnail-hash/vite'
+import { join } from 'node:path'
 
 export default defineConfig({
   optimizeDeps: {
@@ -23,7 +24,10 @@ export default defineConfig({
   plugins: [
     PageProperties(),
     PagePropertiesMarkdownSection({
-      exclude: (_, context) => context.helpers.idEquals('index.md'),
+      excludes: [
+        join('en', 'index.md'),
+        join('index.md'),
+      ],
     }),
     GitChangelog({
       repoURL: () => 'https://github.com/xuanxuan1231/RandPicker-Website',
