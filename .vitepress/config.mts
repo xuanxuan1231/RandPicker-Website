@@ -70,12 +70,12 @@ export default defineConfig({
           '/notification/': [
             {
               text: '通知 & 集成',
-              link: '/notification',
+              link: '/notification/',
               items: [
-                { text: '通知格式', link: '/notification/format' },
+                { text: '通知格式', link: '/notification/format/' },
                 {
                   text: 'ClassIsland 集成',
-                  link: '/notification/classisland',
+                  link: '/notification/classisland/',
                   items: [
                     { text: '安装', link: '/notification/classisland/installation' },
                     { text: '配置', link: '/notification/classisland/configuration'}
@@ -101,7 +101,7 @@ export default defineConfig({
           { text: 'Home', link: '/en/' },
           { text: 'About', link: '/en/about' },
           { text: 'Quick Start', link: '/en/quick-start' },
-          { text: 'Notifications & Integration', link: '/en/notification' }
+          { text: 'Notifications & Integration', link: '/en/notification/' }
         ],
         footer: {
           message: 'Released under the GNU General Public License v3.',
@@ -111,12 +111,12 @@ export default defineConfig({
           '/en/notification/': [
             {
               text: 'Notifications & Integration',
-              link: '/en/notification',
+              link: '/en/notification/',
               items: [
-                { text: 'Notification Format', link: '/en/notification/format' },
+                { text: 'Notification Format', link: '/en/notification/format/' },
                 {
                   text: 'ClassIsland Integration',
-                  link: '/en/notification/classisland',
+                  link: '/en/notification/classisland/',
                   items: [
                     { text: 'Installation', link: '/en/notification/classisland/installation' },
                     { text: 'Configuration', link: '/en/notification/classisland/configuration' }

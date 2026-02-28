@@ -17,3 +17,19 @@ progress: 91
 ![success](success.png)
 
 至此，你已完成 ClassIsland 集成的安装。
+
+## 常见问题
+
+### ClassIsland 插件无法正常加载
+
+对于 macOS 用户：
+
+- 升级 ClassIsland 到 2.0.2.0 版本以上。
+
+对于其他平台用户：
+
+- 复制错误信息，并在[插件的 GitHub 仓库](https://github.com/xuanxuan1231/RandPicker_CI)提出 Issue，或者直接[联系开发者](mailto:bushigemen114@gmail.com)。
+
+### 不可用 无法加载集成所需库
+
+点击“下载”以下载 .NET Core 8 运行时。这是运行 ClassIsland 集成的基础。

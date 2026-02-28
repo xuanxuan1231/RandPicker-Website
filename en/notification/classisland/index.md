@@ -26,6 +26,11 @@ RandPicker 使用 <mark>ClassIsland 插件</mark>[^1]与其通信。完成设置
 - 安装了 <Badge type="tip" text="^1.7.101.0" /> 的 <mark>ClassIsland</mark>  [>>下载](https://www.classisland.tech/download)；
 - 安装了适用于你的电脑的 <mark>.NET 8 运行时</mark>  [>>下载](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)。
 
+:::warning 兼容性警告
+在 macOS 上，只有在 ClassIsland 2.0.2.0 以上版本才能使用插件。
+:::
+
+
 :::tip 不知道你的电脑系统/架构？RandPicker 来帮你！
 在 RandPicker 设置 -> 通知 & 集成 -> ClassIsland 中，若你没有安装 .NET 运行时，你会看到两条消息：
 
